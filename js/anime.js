@@ -8,7 +8,7 @@ var id = url.searchParams.get("id");
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://api.consumet.org/anime/enime/info?id=' + id)
+fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/info?id=' + id)
     .then(response => response.json())
     .then(data => {
         const anime = data;
