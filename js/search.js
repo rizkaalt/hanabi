@@ -10,7 +10,7 @@ let showingResultsForDisplayed = false;
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://api.consumet.org/anime/enime/' + query)
+fetch('https://rizka-english-anime-api.vercel.app/anime/zoro' + query)
     .then(response => response.json())
     .then(data => {
         var cardDiv = document.getElementById("card");
