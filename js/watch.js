@@ -7,7 +7,7 @@ var id = url.searchParams.get("id");
 var no = url.searchParams.get("no");
 
 //Code which fetches API and displays info and other stuff
-fetch('https://api.consumet.org/anime/enime/info?id=' + id)
+fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/info?id=' + id)
     .then(response => response.json())
     .then(data => {
         const anime = data;
@@ -20,7 +20,7 @@ fetch('https://api.consumet.org/anime/enime/info?id=' + id)
     `;
         document.getElementById('info').appendChild(sideDataDiv);
         document.title =  anime.title + ' ' + 'Episode ' + no + '- hanabi';
-        fetch('https://api.consumet.org/anime/enime/info?id=' + id)
+        fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/info?id=' + id)
         .then(response => response.json())
         .then(data => {
           const episodesDiv = document.getElementById("episodesw");
@@ -37,7 +37,7 @@ fetch('https://api.consumet.org/anime/enime/info?id=' + id)
         });
       
 
-        fetch('https://api.consumet.org/anime/enime/watch?episodeId=' + ep)
+        fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/watch?episodeId=' + ep)
         .then(response => response.json())
         .then(data => {
           const episodewatchDiv = document.getElementById('episodewatch');
@@ -87,7 +87,7 @@ const debouncedInput = debounce(function(event) {
 
     const query = document.querySelector("#query").value;
 
-    fetch('https://api.consumet.org/anime/enime/' + query)
+    fetch('https://rizka-english-anime-api.vercel.app/anime/zoro' + query)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 4).forEach(result => {
